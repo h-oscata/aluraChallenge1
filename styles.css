@@ -1,0 +1,135 @@
+*{
+    box-sizing: border-box; 
+    font-family: "Inter", sans-serif;
+}
+body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: #F3F5FC;
+}
+main{
+    display: flex;
+    flex-direction: row; 
+    padding: 30px 50px;
+    gap: 80px;
+    height: 100%;
+}
+
+.firstContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    flex-grow: 1;
+}
+.title{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 30px;
+    h1{
+        flex-grow: 1;
+        text-align: center;
+    }
+}
+.content{
+    flex-grow: 1;
+    margin: 0 100px;
+    textarea{
+        height: 100%;
+        width: 100%;
+        background-color: transparent;
+        border: none;
+        color: #0A3871;
+        font-size: 24px;
+    }
+}
+
+.buttons{
+    margin: 0 auto;
+    padding: 10px;
+    p{
+        margin: 10px 0;
+        color: #495057;
+        font-size: 14px;
+    }
+}
+.btnContainer{
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    
+}
+.btn{
+    border-radius: 20px;
+    padding: 18px;
+    border: none;
+    width: 240px;
+    font-size: 15px;
+    transition: transform .4s;
+}
+.enc{
+    color: white;
+    background-color: #0A3871;
+}
+.desenc{
+    color: #0A3871;
+    background-color: #D8DFE8;
+    border: solid 1px #0A3871;
+}
+.enc:hover{
+    background-color: #0d3e7a;
+    transform: scale(1.07);
+}
+.desenc:hover{
+    background-color: #c1c7cf;
+    transform: scale(1.07);
+}
+
+.secondContainer{
+    background-color: white;
+    padding: 50px;
+    box-shadow: 0 0 20px rgb(159, 159, 159);
+    border-radius: 15px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #495057;
+}
+
+@media (max-width: 1140px) {
+    .btn{
+        width: 200px;
+    }
+}
+@media (max-width:1000px){
+    main{
+        flex-direction: column;
+    }
+    .secondContainer{
+        margin: 0 50px;
+        width: auto;
+    }
+}
+@media (max-width: 600px){
+    .title{
+        flex-direction: column;
+    }
+    .content{
+        margin: 0;
+    }
+    .secondContainer{
+        margin: 0;
+    }
+    .btnContainer{
+        flex-direction: column;
+        gap: 7px;
+    }
+    .btn{
+        width: 250px;
+    }
+}
